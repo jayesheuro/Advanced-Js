@@ -1,0 +1,270 @@
+/* :root {
+  --bg1: #bdd8f1;
+  --bg2: #82a6cb;
+  --bg3: #3667a6;
+  --bg4: #214177;
+} */
+
+:root {
+  --bg1: #2f2519;
+  --bg2: #4a3f35;
+  --bg3: #fa7d09;
+  --bg4: #ff4301;
+  --fontFamily1: "EB Garamond", serif;
+  --fontFamily2: "Poppins", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg4);
+  border-radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fontFamily2);
+  background-color: var(--bg1);
+  color: #ffffff;
+}
+
+.loaderDiv {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 5rem;
+}
+
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  align-items: center;
+  padding: 1.5% 0;
+  border-bottom: 1px solid var(--bg3);
+  background-color: var(--bg2);
+}
+
+.nav .title {
+  flex: 40%;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 5%;
+}
+
+.nav .assignmentLinks {
+  flex: 30%;
+}
+
+.nav .assignmentLinks a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: var(--bg4);
+  padding: 2.5%;
+  margin: 2%;
+  border-radius: 10px;
+}
+
+.nav .assignmentLinks a:hover {
+  background-color: var(--bg3);
+}
+
+.profile {
+  text-align: right;
+  flex: 30%;
+  margin-right: 5%;
+}
+
+/* Assignment */
+
+#ass1 {
+  margin-top: 7%;
+}
+
+.assignmentSection {
+  padding: 3% 5%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+}
+.heading::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 7%;
+  padding-top: 0.3rem;
+  border-bottom: 3px solid var(--bg4);
+}
+
+.question {
+  border: 1px solid gray;
+  padding: 3%;
+}
+
+.qText {
+  font-size: 1.2rem;
+}
+
+.qText strong {
+  color: gray;
+}
+
+.qText strong::after {
+  content: " -";
+}
+
+button {
+  color: #ffffff;
+  font-size: 1rem;
+  background-color: var(--bg4);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 0.7% 2.5%;
+  margin: 2% auto auto;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--bg3);
+}
+
+#searchForm {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 2% 0 0;
+  color: var(--bg3);
+}
+
+input {
+  padding: 0.4% 1%;
+  font-size: 1rem;
+  width: 25%;
+  border-radius: 10px;
+  outline: none;
+}
+
+.ansButton {
+  margin-left: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.ansObjBox,
+.ansBox {
+  background-color: rgba(100, 100, 100, 0.3);
+  width: 50%;
+  margin: auto;
+}
+
+/*Assignment 1 Answer 3 */
+
+#ass1ans3,
+#ass1ans4,
+#ass2ans1 {
+  height: 25rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#ass1ans3 .laureateItem {
+  background-color: rgba(100, 100, 100, 0.3);
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+  padding: 3%;
+}
+#ass1ans3 .laureateItem .lName {
+  font-size: 1.2rem;
+}
+
+#ass1ans3 .laureateItem .lYear {
+  font-size: 0.9rem;
+  color: var(--bg3);
+}
+
+/*Assignment 1 Answer 4 */
+
+#ass1ans4,
+#ass2ans1,
+#ass2ans2 {
+  padding: 2%;
+}
+
+#ass1ans4 .flightItem {
+  border-bottom: 1px solid #ffffff;
+  padding: 3% 0;
+}
+
+#ass1ans4 .flightItem .airportDetails {
+  text-align: center;
+  margin-bottom: 1%;
+}
+#ass1ans4 .flightItem .airportDetails .aCode {
+  color: var(--bg3);
+  font-size: 1.2rem;
+}
+
+#ass1ans4 .flightItem .airportDetails .aName {
+  font-size: 1.5rem;
+}
+
+#ass1ans4 .flightItem .aSum span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--bg4);
+}
+
+/* Assignment 2 Answer 1 */
+
+#ass2ans1 span {
+  color: var(--bg3);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Assignment 2 Answer 2 */
+
+#ass2ans2 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg2);
+  text-align: center;
+  padding: 3%;
+  color: gray;
+}

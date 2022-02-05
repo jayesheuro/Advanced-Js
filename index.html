@@ -1,0 +1,171 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./index.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&display=swap" rel="stylesheet">
+
+  <title>Advanced JS Assignment</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js"
+    integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="nav">
+      <div class="title">
+        Advanced JS Assignment
+      </div>
+      <div class="assignmentLinks">
+        <a style="cursor: pointer;" onclick="scrollHandler()">Assignment 1</a>
+        <a href="#tempId">Assignment 2</a>
+      </div>
+      <div class="profile">
+        - Jayesh Singh
+      </div>
+    </div>
+
+    <div class="assignmentSection" id="ass1">
+      <div class="heading">
+        Assignment 1
+      </div>
+
+      <div class="question">
+        <div class="qBox">
+          <div class="qtext">
+            <strong>Question 1</strong> &nbsp; Get battles.json via. AJAX call (Storing the battles.json in a variable)
+          </div>
+          <button class="ansButton" onclick="renderAns1()">
+            Show Output
+          </button>
+        </div>
+        <div class="ansObjBox" id="ass1ans1"></div>
+      </div>
+      <br><br>
+      <div class="question">
+        <div class="qBox">
+          <div class="qtext">
+            <strong>Question 2</strong> &nbsp; Use the following API to find the repository from git using git search
+            API using ajax. <br>
+            Consider input as the search parameter. <br>
+            <em> **Try to solve this problem in promise , async await and callbacks</em> <br>
+            Visit this api to know moreI : https://developer.github.com/v3/search/
+          </div>
+          <form id="searchForm">
+            <label for="owner">Enter owner name:</label>
+            <input type="text" name="owner" id="owner" required autocomplete="off" />
+            <label for="repo">Enter repo name:</label>
+            <input type="text" name="repo" id="repo" required autocomplete="off" />
+            <button class="ansButton" type="submit">Show Output</button>
+          </form>
+        </div>
+        <div class="ansObjBox" id="ass1ans2"></div>
+
+      </div>
+      <br><br>
+      <div class="question">
+        <div class="qBox">
+          <div class="qtext">
+            <strong>Question 3</strong> &nbsp; API: http://api.nobelprize.org/v1/prize.json
+            <br>
+            <em>**Solve the following problem using async-await and promise (.then .catch)</em> <br>
+            <em> ** Use array methods </em>
+            <br>
+            Fetch all data from API and find all the entries from year 2000 to 2019 and then find people who won prizes
+            for category 'Chemistry'.
+          </div>
+          <button class="ansButton" onclick="renderAns3()">Show Output</button>
+        </div>
+        <div class="ansBox hide" id="ass1ans3"></div>
+      </div>
+      <br><br>
+      <div class="question">
+        <div class="qBox">
+          <div class="qtext">
+            <strong>Question 4</strong> &nbsp; API: https://think.cs.vt.edu/corgis/datasets/json/airlines/airlines.json
+            <br>
+            <em>**Solve the following problem using async-await and promise (.then .catch)</em> <br>
+            <em> ** Use array methods </em>
+            <br>
+            Fetch all data from API and find all the cancelled, delayed, diverted, on time flights for all airports from
+            API 2 and check if the sum is equal to the total value.
+          </div>
+          <button class="ansButton" onclick="renderAns4()">Show Output</button>
+        </div>
+        <div class="ansBox hide" id="ass1ans4"></div>
+        <div id="tempId"></div>
+      </div>
+    </div>
+
+    <div class="assignmentSection" id="ass2">
+      <div class="heading">
+        Assignment 2
+      </div>
+      <div class="question">
+        <div class="qBox">
+          <div class="qtext">
+            <strong>Question 1</strong> &nbsp; Movies Data
+            Api : https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json <br>
+            Problem Statement : Fetch data from the given api Find list of movies done by each actor.<br>
+            Find name of actors and movies under each actor. <br>
+            Find types of genres and movies under each genre
+          </div>
+          <button class="ansButton" onclick="renderA2ans1()">Show Output</button>
+        </div>
+        <div class="ansBox hide" id="ass2ans1"></div>
+      </div>
+      <br><br>
+      <div class="question">
+        <div class="qBox">
+          <div class="qtext">
+            <strong>Question 2</strong> &nbsp; Given the position of two queens on a chess board, indicate whether or
+            not they are positioned so that they can attack each other. <br>
+            Write a class called QueenAttack. <br>
+            Create constructor that initializes the position for two queens. <br>
+            Create a function canAttack which determines whether based on two position the queens can attack each other
+            or not. <br>
+            <em>*Position will be based on matrix system ie first position will be [0,0] and last will be [7,7]</em>
+          </div>
+          <br>
+          <form id="queenForm">
+            <label for="x1">Enter position of Queen 1:</label>
+            <div>
+              <input type='number' id='x1' min=0 max=7 placeholder="x1"></input>
+              <input type='number' id='y1' min=0 max=7 placeholder="y1"></input>
+            </div>
+            <br>
+            <label for="x2">Enter position of Queen 2:</label>
+            <div>
+              <input type='number' id='x2' min=0 max=7 placeholder="x2"></input>
+              <input type='number' id='y2' min=0 max=7 placeholder="y2"></input>
+            </div>
+            <br>
+            <button class="ansButton" type="submit">Show Output</button>
+          </form>
+        </div>
+        <div class="ansBox hide" id="ass2ans2"></div>
+      </div>
+    </div>
+    <div class="footer">
+      Quantiphi : J2J Batch 2022 - SD
+    </div>
+  </div>
+</body>
+<script src="src/ans1.js"></script>
+<script src="src/ans2.js"></script>
+<script src="src/ans3.js"></script>
+<script src="src/ans4.js"></script>
+<script src="src/assignment2_1.js"></script>
+<script src="src/assignment2_2.js"></script>
+
+</html>
